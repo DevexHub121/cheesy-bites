@@ -1,1 +1,4 @@
-
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/devexbmg/developer.devexhub.com/cheesy-bites/
+    - /bin/cp -R images $DEPLOYPATH
