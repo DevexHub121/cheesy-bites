@@ -8,9 +8,6 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 // Allow the content type header to be sent with the request
 header("Access-Control-Allow-Headers: Content-Type");
 
-// Set content type for JSON
-header("Content-Type: application/json");
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
