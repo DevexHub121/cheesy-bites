@@ -1,4 +1,16 @@
 <?php
+// Allow requests from any origin
+header("Access-Control-Allow-Origin: *");
+
+// Allow GET, POST, and OPTIONS request methods
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+
+// Allow the content type header to be sent with the request
+header("Access-Control-Allow-Headers: Content-Type");
+
+// Set content type for JSON
+header("Content-Type: application/json");
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
@@ -9,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $no_of_persons = $_POST['no_of_persons'];
 
     // Set up email parameters
-    $to = "akshay.devexhub@gmail.com"; // Change this to your desired email address
+    $to = "yourmail@gmail.com"; // Change this to your desired email address
     $subject = "New Booking Form Submission";
     $message = "Booking Date: $booking_date\n";
     $message .= "Booking Time: $booking_time\n";
